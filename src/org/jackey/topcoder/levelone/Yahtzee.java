@@ -86,6 +86,7 @@ public class Yahtzee {
 		YahtzeeData = new int[n];
 		for(int i = 0; i < n; i++){
 			YahtzeeData[i] = r.nextInt(n);
+
 		}
 		
 		int[] toss = {1,1,1,1,2,2,2,2,3,3,3,3,3,1,4};
