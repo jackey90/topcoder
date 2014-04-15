@@ -1,5 +1,9 @@
 package org.jackey.topcoder.levelone;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
 /**
  * 
  * @author Jackey
@@ -53,5 +57,39 @@ package org.jackey.topcoder.levelone;
  *        Returns: 10
  */
 public class Yahtzee {
+	public int maxPoints(int[] toss) {
+		int max = 0;
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		for (int i = 0; i < toss.length; i++) {
+			int t = toss[i];
+			if (map.get(t) != null) {
+				map.put(t, map.get(t) + t);
+			} else {
+				map.put(t, t);
+			}
+		}
+		for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+			if (entry.getValue() > max) {
+				max = entry.getValue();
+			}
+		}
+		System.out.println(max);
+		return max;
+	}
+
+	public static void main(String[] args) {
+		int[] YahtzeeData;
+		
+		Random r = new Random();
+		int n = 10000000;
+		
+		YahtzeeData = new int[n];
+		for(int i = 0; i < n; i++){
+			YahtzeeData[i] = r.nextInt(n);
+		}
+		
+		int[] toss = {1,1,1,1,2,2,2,2,3,3,3,3,3,1,4};
+		new Yahtzee().maxPoints(YahtzeeData);
+	}
 
 }
