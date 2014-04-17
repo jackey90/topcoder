@@ -8,6 +8,7 @@ import sun.applet.Main;
  * Date: 4/17/14
  * Time: 12:39 PM
  * To change this template use File | Settings | File Templates.
+ * sovled:https://gist.github.com/ishikawa/17590
  * Problem Statement for SmartWordToy
  * <p/>
  * <p/>
