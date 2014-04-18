@@ -1,6 +1,4 @@
-package org.jackey.topcoder.levelone;
-
-import sun.applet.Main;
+package org.jackey.topcoder.bfs;
 
 /**
  * Created with IntelliJ IDEA.

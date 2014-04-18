@@ -1,4 +1,4 @@
-package org.jackey.topcoder.levelone;
+package org.jackey.topcoder.bfs;
 
 /**
  * 
