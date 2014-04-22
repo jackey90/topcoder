@@ -92,10 +92,10 @@ public class GrafixMask {
             if (x < M && x >= 0 && y < N && y >= 0 && !map[x][y]) {
                 map[x][y] = true;
                 count++;
-                stack.push(new Integer[]{x + 1, y + 1});
-                stack.push(new Integer[]{x - 1, y - 1});
-                stack.push(new Integer[]{x + 1, y - 1});
-                stack.push(new Integer[]{x - 1, y + 1});
+                stack.push(new Integer[]{x, y + 1});
+                stack.push(new Integer[]{x, y - 1});
+                stack.push(new Integer[]{x + 1, y});
+                stack.push(new Integer[]{x - 1, y});
             }
         }
         return count;
