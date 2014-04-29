@@ -84,9 +84,7 @@ public class GeneralChess {
                         }
                     }
                 }
-
             }
-
         }
         String[] result = new String[list.size()];
         return list.toArray(result);
