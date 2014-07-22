@@ -95,12 +95,16 @@ public class FlowerGarden {
         }
 
         for (int i = 1; i < flowers.length; i++) {
-            for (int j = i; j >= 1; j--) {
-                if (needChange(flowers[j - 1], flowers[j])) {
-                    swapFlowers(j - 1, j, flowers);
-                } else {
-                    break;
+            int index = Integer.MAX_VALUE;
+            for (int j = i - 1; j >= 0; j--) {
+                if (needChange(flowers[j], flowers[i])) {
+                    if (j < index) {
+                        index = j;
+                    }
                 }
+            }
+            if (index != Integer.MAX_VALUE) {
+                forwardInsertFlower(i,index,flowers);
             }
         }
 
@@ -111,14 +115,18 @@ public class FlowerGarden {
         return result;
     }
 
-    public void swapFlowers(int i, int j, Flower[] flowers) {
-        Flower temp = flowers[i];
-        flowers[i] = flowers[j];
-        flowers[j] = temp;
+    public void forwardInsertFlower(int current, int insert, Flower[] flowers) {
+        if (insert < current) {
+            Flower temp = flowers[current];
+            for (int i = current - 1; i >= insert; i--) {
+                flowers[i + 1] = flowers[i];
+            }
+            flowers[insert] = temp;
+        }
     }
 
     public boolean needChange(Flower f1, Flower f2) {
-        if ((f1.wilt > f2.bloom && f1.height > f2.height) || (f1.wilt <= f2.bloom && f1.height < f2.height)) {
+        if ((f1.wilt >= f2.bloom && f1.height > f2.height) || (f1.wilt < f2.bloom && f1.height < f2.height)) {
             return true;
         }
         return false;
@@ -137,9 +145,9 @@ public class FlowerGarden {
     }
 
     public static void main(String[] args) {
-        int[] height = {5, 4, 3, 2, 1};
-        int[] bloom = {1, 5, 10, 15, 20};
-        int[] wilt = {5, 10, 14, 20, 25};
+        int[] height = {5,4,3,2,1};
+        int[] bloom = {1,5,10,15,20};
+        int[] wilt = {4,9,14,19,24};
 
         int[] result = new FlowerGarden().getOrdering(height, bloom, wilt);
         PrintUtil.jPrint(result);
