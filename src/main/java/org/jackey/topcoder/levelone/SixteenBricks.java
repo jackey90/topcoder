@@ -1,10 +1,7 @@
 package org.jackey.topcoder.levelone;
 
-import com.sun.deploy.util.ArrayUtil;
 
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
 
 /**
  * Created with IntelliJ IDEA.
