@@ -18,33 +18,26 @@ import java.util.Arrays;
  * Credits:
  * Special thanks to @jianchao.li.fighter for adding this problem and creating all test cases.
  */
+
 public class MoveZeroes {
 
     public void moveZeroes(int[] nums) {
 
-        int i = 0, j = nums.length - 1;
+        int i = 0, j = 0;
 
-        while (i < j) {
-            while (nums[i] != 0) {
-                i++;
-            }
-            while (nums[j] == 0) {
-                j--;
-            }
-
-            if(i  < j){
-                int temp = nums[i];
-                nums[i] = nums[j];
-                nums[j] = temp;
+        for(; i < nums.length ; i++){
+            if(nums[i] != 0){
+                nums[j] = nums[i];
+                nums[i] = 0;
+                j++;
             }
         }
 
-        Arrays.sort(nums, 0, i );
         JOutPrint.JPrint(nums);
     }
 
     public static void main(String[] args) {
-        int[] nums = {0, 1, 0, 3, 12};
+        int[] nums = {0, 1, 0, 3, 12, 4 , 0, 0 , 5};
         new MoveZeroes().moveZeroes(nums);
     }
 }
