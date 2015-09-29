@@ -28,7 +28,9 @@ public class MoveZeroes {
         for(; i < nums.length ; i++){
             if(nums[i] != 0){
                 nums[j] = nums[i];
-                nums[i] = 0;
+                if(i != j) {
+                    nums[i] = 0;
+                }
                 j++;
             }
         }
