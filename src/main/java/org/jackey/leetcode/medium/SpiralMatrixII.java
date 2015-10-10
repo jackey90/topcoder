@@ -22,27 +22,27 @@ import java.util.Arrays;
 public class SpiralMatrixII {
     public int[][] generateMatrix(int n) {
         int[][] result = new int[n][n];
-        if(n == 0){
+        if (n == 0) {
             return result;
         }
 
         int current = 1;
         int min = 0;
-        int max = n -1;
+        int max = n - 1;
 
-        int i ,j;
+        int i, j;
 
-        while(min <= n/2 && max >= n/2){
-            for(i = min, j = min ;j <= max;j++){
+        while (min <= n / 2 && max >= n / 2) {
+            for (i = min, j = min; j <= max; j++) {
                 result[i][j] = current++;
             }
-            for(i = min + 1,j = max;i <= max; i++){
+            for (i = min + 1, j = max; i <= max; i++) {
                 result[i][j] = current++;
             }
-            for(i = max,j = max-1;j >= min; j--){
+            for (i = max, j = max - 1; j >= min; j--) {
                 result[i][j] = current++;
             }
-            for(j = min, i = max -1;i >= min + 1; i--){
+            for (j = min, i = max - 1; i >= min + 1; i--) {
                 result[i][j] = current++;
             }
             min++;
@@ -50,7 +50,7 @@ public class SpiralMatrixII {
         }
 
 
-        JOutPrint.JPrint( Arrays.deepToString(result));
+        JOutPrint.JPrint(result);
         return result;
     }
 

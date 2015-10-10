@@ -93,8 +93,6 @@ public class GameOfLife {
                 count++;
             }
         }
-
-
         return count;
     }
 
@@ -110,7 +108,6 @@ public class GameOfLife {
                 board[x][y] = 2;
             }
         }
-
     }
 
 
@@ -124,8 +121,8 @@ public class GameOfLife {
     }
 
     public static void main(String[] args) {
-        int[][] board = {{1,1}};
+        int[][] board = {{1, 1}};
         new GameOfLife().gameOfLife(board);
-        JOutPrint.JPrint( Arrays.deepToString(board));
+        JOutPrint.JPrint(board);
     }
 }
