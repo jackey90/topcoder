@@ -1,5 +1,7 @@
 package main.java.org.jackey.leetcode.medium;
 
+import main.java.org.jackey.leetcode.common.ListNode;
+
 /**
  * Created by jackey90 on 16/1/26.
  * You are given two linked lists representing two non-negative numbers.
@@ -47,21 +49,6 @@ public class AddTwoNumbers {
         return node;
     }
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-
-        public String toString() {
-            if (next != null) {
-                return val + "->" + next.toString();
-            }
-            return val + "";
-        }
-    }
 
 
     public static void main(String[] args) {
