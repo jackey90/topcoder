@@ -37,6 +37,9 @@ public class SmallestNumAfterReplace {
             }
         }
 
+        if(removeIndex == 0) {
+            removeIndex = charArray.length - 2;
+        }
         charArray = ArrayUtils.remove(charArray, removeIndex);
         return Integer.valueOf(String.valueOf(charArray));
     }
@@ -47,5 +50,7 @@ public class SmallestNumAfterReplace {
          System.out.println(new SmallestNumAfterReplace().solution(31));          // 3
         System.out.println(new SmallestNumAfterReplace().solution(1234321));      // 123421
         System.out.println(new SmallestNumAfterReplace().solution(4321234));      //421234
+         System.out.println(new SmallestNumAfterReplace().solution(177763));       //    17763
+
     }
 }
