@@ -24,19 +24,21 @@ import org.apache.commons.lang3.ArrayUtils;
 public class SmallestNumAfterReplace {
     public int solution(int x) {
         char[] charArray = (x + "").toCharArray();
-
+        // return the max digit if length == 2
         if(charArray.length == 2){
             return Math.max(Integer.valueOf(charArray[0]), Integer.valueOf(charArray[1]))  - Integer.valueOf('0')  ;
         }
 
+        //find first the decreasing(or equal) digit and the next digit should also be decreasing(or equal)
         int removeIndex = 0;
         for (int i = 1; i < charArray.length ; i++) {
-            if (charArray[i] < charArray[i - 1] && i + 1 < charArray.length && charArray[i + 1] < charArray[i]) {
+            if (charArray[i] <= charArray[i - 1] && i + 1 < charArray.length && charArray[i + 1] <= charArray[i]) {
                 removeIndex = i;
                 break;
             }
         }
 
+        //otherwise remove the second last
         if(removeIndex == 0) {
             removeIndex = charArray.length - 2;
         }
