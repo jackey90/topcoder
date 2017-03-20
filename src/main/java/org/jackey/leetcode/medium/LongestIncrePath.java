@@ -1,4 +1,4 @@
-package main.java.org.jackey.leetcode.medium;
+package org.jackey.leetcode.medium;
 
 /**
  * Created by jackey90 on 16/1/21.

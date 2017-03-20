@@ -1,9 +1,5 @@
-package main.java.org.jackey.leetcode.medium;
+package org.jackey.leetcode.medium;
 
-import com.google.common.collect.Maps;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by jackey90 on 16/9/26.

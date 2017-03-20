@@ -1,10 +1,6 @@
-package main.java.org.jackey.leetcode.medium;
-
-import com.google.common.collect.Lists;
+package org.jackey.leetcode.medium;
 
 import java.util.*;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -53,7 +49,7 @@ public class LetterCombination {
     }
 
     public static void main(String[] args) {
-        System.out.println(Lists.newArrayList(new LetterCombination().letterCombinations("23345")));
+        System.out.println(new LetterCombination().letterCombinations("23345"));
     }
 
 }

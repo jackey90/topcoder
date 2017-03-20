@@ -1,6 +1,5 @@
-package main.java.org.jackey.leetcode.medium;
+package org.jackey.leetcode.medium;
 
-import org.apache.commons.lang3.ArrayUtils;
 import org.jackey.kingbox.jtool.inAndOut.JOutPrint;
 
 import java.util.Arrays;

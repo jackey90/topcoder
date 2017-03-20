@@ -1,4 +1,4 @@
-package main.java.org.jackey.leetcode.common;
+package org.jackey.leetcode.common;
 
 /**
  * Created by jackey90 on 16/2/5.

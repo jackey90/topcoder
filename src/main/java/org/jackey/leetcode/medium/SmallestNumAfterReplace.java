@@ -1,4 +1,4 @@
-package main.java.org.jackey.leetcode.medium;
+package org.jackey.leetcode.medium;
 
 import org.apache.commons.lang3.ArrayUtils;
 

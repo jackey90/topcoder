@@ -1,4 +1,4 @@
-package main.java.org.jackey.leetcode.easy;
+package org.jackey.leetcode.easy;
 
 import org.jackey.kingbox.jtool.inAndOut.JOutPrint;
 

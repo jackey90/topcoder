@@ -1,6 +1,6 @@
-package main.java.org.jackey.leetcode.easy;
+package org.jackey.leetcode.easy;
 
-import main.java.org.jackey.leetcode.common.ListNode;
+import org.jackey.leetcode.common.ListNode;
 
 /**
  * Created by jackey90 on 16/2/5.
